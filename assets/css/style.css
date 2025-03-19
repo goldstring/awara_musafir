@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gidole&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    --fill-layer-image-opacity: 0.8;
+    --bg-overlay-color: rgba(0, 0, 0, 0.5);
+    --bg-gradient: none;
+    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #5f687b; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #10bc69; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+body{
+    font-family: "Barlow", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    overflow-x: hidden;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  top:40%;
+  background:#333; /* Semi-transparent background */
+  border-radius: 50%; /* Circular shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, transform 0.2s ease;
+  
+}
+.carousel-control-prev-icon
+{
+    color:#fff!important;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+  transform: scale(1.1); /* Slight zoom effect */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Makes icons white */
+  width: 24px;
+  height: 24px;
+}
+/* Sidebar Styles */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -250px;
+  background: #f8f9fa;
+  transition: 0.3s;
+  padding-top: 20px;
+  z-index: 1050;
+}
+.sidebar.show {
+  left: 0;
+}
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+.sidebar ul li {
+  padding: 10px;
+}
+.sidebar ul li a {
+text-decoration: none;
+color: #000;
+display: block;
+padding: 10px;
+}
+
+
+.sidebar ul li a:hover {
+  background: #ddd;
+}
+
+.carousel-item {
+position: relative;
+}
+
+.carousel-item img, .carousel-item.active img {
+width: 980px;
+height: 490px;
+object-fit: cover;
+object-position: 50% 50%;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds shadow */
+}
+
+/* Overlay Effect on Carousel Images */
+.carousel-item::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+z-index: 1;
+}
+
+/* Ensure captions are above the overlay */
+.carousel-caption {
+z-index: 2;
+color: #fff; /* Makes text visible over dark overlay */
+}
+
+/* Overlay Styles (If needed elsewhere) */
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: none;
+z-index: 1049;
+cursor: pointer;
+}
+.overlay.show {
+display: block;
+}
+
+/* Responsive Design */
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+.carousel-item img, .carousel-item.active img {
+width: 100%;
+height: auto;
+object-fit: contain;
+}
+.carousel-caption h1 {
+font-size: 2rem; /* Slightly smaller for tablets */
+}
+.carousel-caption p {
+font-size: 1rem;
+}
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+.carousel-item img, .carousel-item.active img {
+width: 100%;
+height: auto;
+object-fit: contain;
+}
+.carousel-caption h1 {
+font-size: 1.5rem; /* Smaller for mobile */
+}
+.carousel-caption p {
+font-size: 0.9rem;
+}
+}
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+.carousel-caption h1 {
+font-size: 0.8rem; /* More compact for small screens */
+}
+.carousel-caption p {
+font-size: 0.3rem;
+}
+}
+.carousel-caption h1,.carousel-caption p{
+text-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
+ul .nav-item
+{
+font-size:20px;
+}
+.sidebar ul .nav-item
+{
+font-size:15px;
+}
+.dropdown-item:hover {
+color: var(--bs-dropdown-link-active-color);
+text-decoration: none;
+background-color: var(--bs-dropdown-link-active-bg);
+}
+
+.navbar-toggler,.navbar-toggler:focus,.navbar-toggler:focus-within
+{
+  border: none;
+  outline: unset;
+  box-shadow: unset;
+}
+
+/*--------------------------------------------------------------
+# Global Footer
+--------------------------------------------------------------*/
+.footer {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  font-size: 14px;
+  position: relative;
+}
+
+.footer .footer-newsletter {
+  background-color: color-mix(in srgb, var(--default-color), transparent 97%);
+  padding: 50px 0;
+}
+
+.footer .footer-newsletter h4 {
+  font-size: 24px;
+}
+
+.footer .footer-newsletter .newsletter-form {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  padding: 6px 8px;
+  position: relative;
+  border-radius: 4px;
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
+  display: flex;
+  transition: 0.3s;
+  border-radius: 50px;
+}
+
+.footer .footer-newsletter .newsletter-form:focus-within {
+  border-color: var(--accent-color);
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email] {
+  border: 0;
+  padding: 4px;
+  width: 100%;
+  background-color: var(--surface-color);
+  color: var(--default-color);
+}
+
+.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+  outline: none;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit] {
+  border: 0;
+  font-size: 16px;
+  padding: 0 20px;
+  margin: -7px -8px -7px 0;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transition: 0.3s;
+  border-radius: 50px;
+}
+
+.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+}
+
+.footer .footer-top {
+  padding-top: 50px;
+}
+
+.footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  font-size: 16px;
+  color: #fff;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+.footer .social-links a:hover {
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.footer h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer .footer-links {
+  margin-bottom: 30px;
+}
+
+.footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer .footer-links ul i {
+  margin-right: 3px;
+  font-size: 12px;
+  line-height: 0;
+  color: var(--accent-color);
+}
+
+.footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+.footer .footer-links ul a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  line-height: 1;
+  font-size: 15px;
+}
+
+.footer .footer-links ul a:hover {
+  color: var(--accent-color);
+}
+
+.footer .footer-about a {
+  color: var(--heading-color);
+  font-size: 24px;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.footer .footer-contact p {
+  margin-bottom: 5px;
+}
+
+.footer .copyright {
+  padding: 25px 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.footer .copyright p {
+  margin-bottom: 0;
+}
+
+.footer .credits {
+  margin-top: 6px;
+  font-size: 13px;
+}
+.social-links a
+{
+  border-color: 1px solid #fff;
+}
+.social-links a i{
+  color: #fff;
+}
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  overflow: hidden;
+  background: var(--background-color);
+  transition: all 0.6s ease-out;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #ffffff;
+  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1.5s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: -15px;
+  z-index: 99999;
+  background-color: #ccc;
+  width: 44px;
+  height: 44px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: #333;
+  line-height: 0;
+}
+
+.scroll-top:hover{
+  background-color: #333;
+  color: #fff;
+}
+.scroll-top:hover i {
+  color: #fff;
+}
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
+.theme-bg {
+  background-color: #ccc;
+}
+.theme_box {
+  padding: 30px;
+  box-shadow: 0 0 20px #9b9b9b;
+  border-radius: 10px;
+}
+.bg-white {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
+}
+.footer
+{
+  background-color: #233243;
+  color:#fff;
+}
+
+/*--------------------------------------------------------------
+# achivement
+--------------------------------------------------------------*/
+.achievements {
+  display: block;
+  text-align: center;
+  color: #525252;
+  background-color: red;
+  padding-top: 10px;
+}
+.content-flex {
+  display: flex
+;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+.content-box {
+  display: flex
+;
+  width: 50%;
+  height: 200px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.achieve-revealer {
+  text-transform: capitalize;
+}
+.value {
+  font-size: 2em;
+  display: block;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Floating Social Media Bar Style Starts Here */
+
+.fl-fl {
+  background: #000000;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  padding: 0px;
+  width: 200px;
+  position: fixed;
+  right: -155px;
+  z-index: 1000;
+  font: normal normal 10px Arial;
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+
+.fa {
+  font-size: 20px;
+  color: #fff;
+  padding: 7px 0;
+  
+}
+.fl-fl a {
+  color: #fff !important;
+  text-decoration: none;
+  text-align: center;
+  line-height: 43px!important;
+  vertical-align: top!important;
+}
+
+.float-youtube{
+  top: 176px;
+  background:#ff0000;
+  transition: 400ms;
+}
+
+.float-youtube:hover{
+    background-color: linear-gradient(#f10c2ae0, #ec6023e0);
+	margin-right: 10px;
+} 
+
+.float-ig {
+  top: 209px;
+  background-image: linear-gradient(#f10c2ae0, #ec6023e0);
+  transition: 400ms;
+}
+
+.float-ig:hover{
+  background-color: linear-gradient(#f10c2ae0, #ec6023e0);
+  margin-right: 10px;
+}
+
+.float-fb {
+  top: 242px;
+  background-color: #3a579a;
+}
+
+.float-fb:hover{
+  background-color: #3a579a;
+  margin-right: 10px;
+}
+
+.float-twitter{
+  top: 275px;
+  background:#278ddc;
+  transition: 400ms;
+}
+
+.float-twitter:hover{
+   background-color: #278ddc;
+   margin-right: 10px;
+}
+.float-whatsapp{
+  top: 308px;
+  background:#00CC00;
+  transition: 400ms;
+}
+.float-whatsapp:hover{
+   background-color:#00CC00;
+   margin-right: 10px;
+}
+.float-linkedin{
+  top: 370px ;
+  background:#4296bf;
+  transition: 400ms;
+}
+
+.float-linkedin:hover{
+   background-color:#4296bf;
+   margin-right: 10px;
+}
+/* Floating Social Media Bar Style Ends Here */

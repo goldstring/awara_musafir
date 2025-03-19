@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar & Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: -250px;
+            background: #f8f9fa;
+            transition: 0.3s;
+            padding-top: 20px;
+            z-index: 1050;
+        }
+        .sidebar.show {
+            left: 0;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #000;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background: #ddd;
+        }
+
+        .carousel-item {
+  position: relative;
+}
+
+.carousel-item img, .carousel-item.active img {
+  width: 980px;
+  height: 490px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds shadow */
+}
+
+/* Overlay Effect on Carousel Images */
+.carousel-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1;
+}
+
+/* Ensure captions are above the overlay */
+.carousel-caption {
+  z-index: 2;
+  color: #fff; /* Makes text visible over dark overlay */
+}
+
+/* Overlay Styles (If needed elsewhere) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1049;
+}
+.overlay.show {
+  display: block;
+}
+
+/* Responsive Design */
+/* Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .carousel-item img, .carousel-item.active img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .carousel-caption h1 {
+        font-size: 2rem; /* Slightly smaller for tablets */
+    }
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+}
+
+/* Mobile Devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .carousel-item img, .carousel-item.active img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .carousel-caption h1 {
+        font-size: 1.5rem; /* Smaller for mobile */
+    }
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+/* Small Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .carousel-caption h1 {
+        font-size: 0.8rem; /* More compact for small screens */
+    }
+    .carousel-caption p {
+        font-size: 0.3rem;
+    }
+}
+.carousel-caption h1,.carousel-caption p{
+    text-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;
+}
+ul .nav-item
+{
+    font-size:20px;
+}
+.dropdown-item:hover {
+    color: var(--bs-dropdown-link-active-color);
+    text-decoration: none;
+    background-color: var(--bs-dropdown-link-active-bg);
+}
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top fixed-top" style="background-color:#ccc;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Logo" style="width: 60px;">
+            </a>
+            <!-- Navbar Toggler triggers sidebar -->
+            <button class="navbar-toggler" type="button" id="navbarToggler">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Services
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="#">Wedding photograhy</a></li>
+                          <li><a class="dropdown-item" href="#">Prewedding photograhy</a></li>
+                          
+                        </ul>
+                      </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownGallery" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Gallery
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownGallery">
+                          <li><a class="dropdown-item" href="#">Wedding photograhy</a></li>
+                          <li><a class="dropdown-item" href="#">Prewedding photograhy</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact_us.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="index.html">🏠 Home</a></li>
+            <li><a href="products.html">📦 Products</a></li>
+            <li><a href="services.html">🛠 Services</a></li>
+            <li><a href="portfolio.html">📁 Portfolio</a></li>
+            <li><a href="careers.html">💼 Careers</a></li>
+            <li><a href="blogs.html">📝 Blogs</a></li>
+            <li><a href="about_us.html">ℹ️ About Us</a></li>
+            <li><a href="contact_us.html">📞 Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div id="carouselExampleCaptions" class="carousel slide p-0" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/images/banner/banner4.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                      <h1 class="text-uppercase">Wedding photograhy</h1>
+                      <p>WEDDING - ENGAGEMENT - EVENTS</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/images/banner/banner5.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <h1 class="text-uppercase">Wedding photograhy</h1>
+                        <p>WEDDING - ENGAGEMENT - EVENTS</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/images/banner/banner6.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption">
+                        <h1 class="text-uppercase">Wedding photograhy</h1>
+                        <p>WEDDING - ENGAGEMENT - EVENTS</p>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev shadow-lg bg-dark" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <button class="carousel-control-next shadow-lg bg-dark" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+              </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- JavaScript to control sidebar -->
+    <script>
+        document.getElementById("navbarToggler").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("show");
+            document.getElementById("overlay").classList.toggle("show");
+        });
+
+        document.getElementById("overlay").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.remove("show");
+            document.getElementById("overlay").classList.remove("show");
+        });
+    </script>
+
+</body>
+</html>
