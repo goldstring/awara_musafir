@@ -17,6 +17,9 @@ body{
     font-style: normal;
     overflow-x: hidden;
 }
+.navbar{
+  background-color: #151c39;
+}
 .carousel-control-prev,
 .carousel-control-next {
   width: 50px;
@@ -58,6 +61,7 @@ body{
   transition: 0.3s;
   padding-top: 20px;
   z-index: 1050;
+  overflow-y: auto;
 }
 .sidebar.show {
   left: 0;
@@ -398,7 +402,7 @@ background-color: var(--bs-dropdown-link-active-bg);
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: #ccc;
+  background-color: #00CC00;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -407,17 +411,11 @@ background-color: var(--bs-dropdown-link-active-bg);
 
 .scroll-top i {
   font-size: 24px;
-  color: #333;
+  color: #fff;
   line-height: 0;
 }
 
-.scroll-top:hover{
-  background-color: #333;
-  color: #fff;
-}
-.scroll-top:hover i {
-  color: #fff;
-}
+
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
@@ -425,7 +423,7 @@ background-color: var(--bs-dropdown-link-active-bg);
 }
 
 .theme-bg {
-  background-color: #ccc;
+  background-color: #f2a300;
 }
 .theme_box {
   padding: 30px;
@@ -449,7 +447,7 @@ background-color: var(--bs-dropdown-link-active-bg);
   display: block;
   text-align: center;
   color: #525252;
-  background-color: red;
+  background-color: #f2a300;
   padding-top: 10px;
 }
 .content-flex {
@@ -474,8 +472,17 @@ background-color: var(--bs-dropdown-link-active-bg);
 .value {
   font-size: 2em;
   display: block;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 500;
+  color: #151c39;
+}
+
+.flex-para
+{
+  text-transform: capitalize;
+}
+
+.flex-para h1{
+  font-size: 2rem;
 }
 
 /* Floating Social Media Bar Style Starts Here */
@@ -573,3 +580,69 @@ background-color: var(--bs-dropdown-link-active-bg);
    margin-right: 10px;
 }
 /* Floating Social Media Bar Style Ends Here */
+#headerNavbarItems li .dropdown-menu
+{
+  padding: 0px;
+}
+
+#headerNavbarItems li .dropdown-menu .dropdown-item {
+  padding: 10px 35px;
+}
+
+#headerNavbarItems li .dropdown-menu
+{
+  background-color: #13aff0;
+}
+#headerNavbarItems li .dropdown-menu li{
+  border-bottom: 3px solid #eeee22;
+}
+
+#headerNavbarItems li .dropdown-menu li:last-child{
+  border-bottom: unset;
+}
+#headerNavbarItems li .dropdown-menu li a{
+  color:#fff;
+  font-weight: 500;
+}
+#headerNavbarItems li a{
+  color:#fff;
+}
+
+#headerNavbarItems li .dropdown-menu li .dropdown-item:hover,
+#headerNavbarItems li .dropdown-menu li .dropdown-item:focus,
+#headerNavbarItems li .dropdown-menu li .dropdown-item:active,
+#headerNavbarItems li .dropdown-menu li .dropdown-item:focus-within
+{
+  color:#333!important;
+  background-color:#eeee22!important;
+  
+}
+
+
+/* Testimonials Style Starts Here */
+.testimonialsCards {
+  border: 3px dashed #151c39;
+}
+.testimonal_title {
+  text-align: left;
+  color: #545454;
+  font-weight: 800;
+  line-height: 1em;
+}
+.fw-normal {
+  font-weight: 400!important;
+}
+.comment_profile_container img {
+  border-radius: 140px;
+  width: 75px!important;
+  height: 75px;
+}
+.quote_icon {
+  font-size: 1rem;
+  border-radius: 2rem;
+  background-color: #151c39;
+  color: #eeee22;
+  outline: none;
+  border: unset;
+}
+/* Testimonials Style Ends Here */
