@@ -1,41 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gidole&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Gidole&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
-    --fill-layer-image-opacity: 0.8;
-    --bg-overlay-color: rgba(0, 0, 0, 0.5);
-    --bg-gradient: none;
-    --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-    --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-    --heading-color: #5f687b; /* Color for headings, subheadings and title throughout the website */
-    --accent-color: #10bc69; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
-  }
-  
-body{
-    font-family: "Barlow", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-    overflow-x: hidden;
+  --fill-layer-image-opacity: 0.8;
+  --bg-overlay-color: rgba(0, 0, 0, 0.5);
+  --bg-gradient: none;
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #5f687b; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #10bc69; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
-.navbar{
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  overflow-x: hidden;
+}
+.navbar {
   background-color: #151c39;
 }
 .carousel-control-prev,
 .carousel-control-next {
   width: 50px;
   height: 50px;
-  top:40%;
-  background:#333; /* Semi-transparent background */
+  top: 40%;
+  background: #333; /* Semi-transparent background */
   border-radius: 50%; /* Circular shape */
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background 0.3s ease, transform 0.2s ease;
-  
 }
-.carousel-control-prev-icon
-{
-    color:#fff!important;
+.carousel-control-prev-icon {
+  color: #fff !important;
 }
 
 .carousel-control-prev:hover,
@@ -74,121 +72,123 @@ body{
   padding: 10px;
 }
 .sidebar ul li a {
-text-decoration: none;
-color: #000;
-display: block;
-padding: 10px;
+  text-decoration: none;
+  color: #000;
+  display: block;
+  padding: 10px;
 }
-
 
 .sidebar ul li a:hover {
   background: #ddd;
 }
 
 .carousel-item {
-position: relative;
+  position: relative;
 }
 
-.carousel-item img, .carousel-item.active img {
-width: 980px;
-height: 490px;
-object-fit: cover;
-object-position: 50% 50%;
-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds shadow */
+.carousel-item img,
+.carousel-item.active img {
+  width: 980px;
+  height: 490px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds shadow */
 }
 
 /* Overlay Effect on Carousel Images */
 .carousel-item::before {
-content: "";
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
-z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  z-index: 1;
 }
 
 /* Ensure captions are above the overlay */
 .carousel-caption {
-z-index: 2;
-color: #fff; /* Makes text visible over dark overlay */
+  z-index: 2;
+  color: #fff; /* Makes text visible over dark overlay */
 }
 
 /* Overlay Styles (If needed elsewhere) */
 .overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0, 0, 0, 0.5);
-display: none;
-z-index: 1049;
-cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1049;
+  cursor: pointer;
 }
 .overlay.show {
-display: block;
+  display: block;
 }
 
 /* Responsive Design */
 /* Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
-.carousel-item img, .carousel-item.active img {
-width: 100%;
-height: auto;
-object-fit: contain;
-}
-.carousel-caption h1 {
-font-size: 2rem; /* Slightly smaller for tablets */
-}
-.carousel-caption p {
-font-size: 1rem;
-}
+  .carousel-item img,
+  .carousel-item.active img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .carousel-caption h1 {
+    font-size: 2rem; /* Slightly smaller for tablets */
+  }
+  .carousel-caption p {
+    font-size: 1rem;
+  }
 }
 
 /* Mobile Devices (max-width: 768px) */
 @media (max-width: 768px) {
-.carousel-item img, .carousel-item.active img {
-width: 100%;
-height: auto;
-object-fit: contain;
-}
-.carousel-caption h1 {
-font-size: 1.5rem; /* Smaller for mobile */
-}
-.carousel-caption p {
-font-size: 0.9rem;
-}
+  .carousel-item img,
+  .carousel-item.active img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+  .carousel-caption h1 {
+    font-size: 1.5rem; /* Smaller for mobile */
+  }
+  .carousel-caption p {
+    font-size: 0.9rem;
+  }
 }
 /* Small Mobile Devices (max-width: 480px) */
 @media (max-width: 480px) {
-.carousel-caption h1 {
-font-size: 0.8rem; /* More compact for small screens */
+  .carousel-caption h1 {
+    font-size: 0.8rem; /* More compact for small screens */
+  }
+  .carousel-caption p {
+    font-size: 0.3rem;
+  }
 }
+.carousel-caption h1,
 .carousel-caption p {
-font-size: 0.3rem;
+  text-shadow: rgba(0, 0, 0, 0.4) 0px 4px 5px;
 }
+ul .nav-item {
+  font-size: 20px;
 }
-.carousel-caption h1,.carousel-caption p{
-text-shadow:rgba(0, 0, 0, 0.4) 0px 4px 5px;
-}
-ul .nav-item
-{
-font-size:20px;
-}
-.sidebar ul .nav-item
-{
-font-size:15px;
+.sidebar ul .nav-item {
+  font-size: 15px;
 }
 .dropdown-item:hover {
-color: var(--bs-dropdown-link-active-color);
-text-decoration: none;
-background-color: var(--bs-dropdown-link-active-bg);
+  color: var(--bs-dropdown-link-active-color);
+  text-decoration: none;
+  background-color: var(--bs-dropdown-link-active-bg);
 }
 
-.navbar-toggler,.navbar-toggler:focus,.navbar-toggler:focus-within
-{
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:focus-within {
   border: none;
   outline: unset;
   box-shadow: unset;
@@ -231,7 +231,7 @@ background-color: var(--bs-dropdown-link-active-bg);
   border-color: var(--accent-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email] {
+.footer .footer-newsletter .newsletter-form input[type="email"] {
   border: 0;
   padding: 4px;
   width: 100%;
@@ -239,11 +239,11 @@ background-color: var(--bs-dropdown-link-active-bg);
   color: var(--default-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+.footer .footer-newsletter .newsletter-form input[type="email"]:focus-visible {
   outline: none;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit] {
+.footer .footer-newsletter .newsletter-form input[type="submit"] {
   border: 0;
   font-size: 16px;
   padding: 0 20px;
@@ -254,7 +254,7 @@ background-color: var(--bs-dropdown-link-active-bg);
   border-radius: 50px;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+.footer .footer-newsletter .newsletter-form input[type="submit"]:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
@@ -340,7 +340,8 @@ background-color: var(--bs-dropdown-link-active-bg);
 
 .footer .copyright {
   padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -351,11 +352,10 @@ background-color: var(--bs-dropdown-link-active-bg);
   margin-top: 6px;
   font-size: 13px;
 }
-.social-links a
-{
+.social-links a {
   border-color: 1px solid #fff;
 }
-.social-links a i{
+.social-links a i {
   color: #fff;
 }
 /*--------------------------------------------------------------
@@ -402,7 +402,7 @@ background-color: var(--bs-dropdown-link-active-bg);
   right: 15px;
   bottom: -15px;
   z-index: 99999;
-  background-color: #00CC00;
+  background-color: #00cc00;
   width: 44px;
   height: 44px;
   border-radius: 50px;
@@ -414,7 +414,6 @@ background-color: var(--bs-dropdown-link-active-bg);
   color: #fff;
   line-height: 0;
 }
-
 
 .scroll-top.active {
   visibility: visible;
@@ -434,10 +433,9 @@ background-color: var(--bs-dropdown-link-active-bg);
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
 }
-.footer
-{
+.footer {
   background-color: #233243;
-  color:#fff;
+  color: #fff;
 }
 
 /*--------------------------------------------------------------
@@ -451,15 +449,13 @@ background-color: var(--bs-dropdown-link-active-bg);
   padding-top: 10px;
 }
 .content-flex {
-  display: flex
-;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 5px;
 }
 .content-box {
-  display: flex
-;
+  display: flex;
   width: 50%;
   height: 200px;
   align-items: center;
@@ -476,12 +472,11 @@ background-color: var(--bs-dropdown-link-active-bg);
   color: #151c39;
 }
 
-.flex-para
-{
+.flex-para {
   text-transform: capitalize;
 }
 
-.flex-para h1{
+.flex-para h1 {
   font-size: 2rem;
 }
 
@@ -497,37 +492,36 @@ background-color: var(--bs-dropdown-link-active-bg);
   right: -155px;
   z-index: 1000;
   font: normal normal 10px Arial;
-  -webkit-transition: all .25s ease;
-  -moz-transition: all .25s ease;
-  -ms-transition: all .25s ease;
-  -o-transition: all .25s ease;
-  transition: all .25s ease;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
 }
 
 .fa {
   font-size: 20px;
   color: #fff;
   padding: 7px 0;
-  
 }
 .fl-fl a {
   color: #fff !important;
   text-decoration: none;
   text-align: center;
-  line-height: 43px!important;
-  vertical-align: top!important;
+  line-height: 43px !important;
+  vertical-align: top !important;
 }
 
-.float-youtube{
+.float-youtube {
   top: 176px;
-  background:#ff0000;
+  background: #ff0000;
   transition: 400ms;
 }
 
-.float-youtube:hover{
-    background-color: linear-gradient(#f10c2ae0, #ec6023e0);
-	margin-right: 10px;
-} 
+.float-youtube:hover {
+  background-color: linear-gradient(#f10c2ae0, #ec6023e0);
+  margin-right: 10px;
+}
 
 .float-ig {
   top: 209px;
@@ -535,7 +529,7 @@ background-color: var(--bs-dropdown-link-active-bg);
   transition: 400ms;
 }
 
-.float-ig:hover{
+.float-ig:hover {
   background-color: linear-gradient(#f10c2ae0, #ec6023e0);
   margin-right: 10px;
 }
@@ -545,43 +539,42 @@ background-color: var(--bs-dropdown-link-active-bg);
   background-color: #3a579a;
 }
 
-.float-fb:hover{
+.float-fb:hover {
   background-color: #3a579a;
   margin-right: 10px;
 }
 
-.float-twitter{
+.float-twitter {
   top: 275px;
-  background:#278ddc;
+  background: #278ddc;
   transition: 400ms;
 }
 
-.float-twitter:hover{
-   background-color: #278ddc;
-   margin-right: 10px;
+.float-twitter:hover {
+  background-color: #278ddc;
+  margin-right: 10px;
 }
-.float-whatsapp{
+.float-whatsapp {
   top: 308px;
-  background:#00CC00;
+  background: #00cc00;
   transition: 400ms;
 }
-.float-whatsapp:hover{
-   background-color:#00CC00;
-   margin-right: 10px;
+.float-whatsapp:hover {
+  background-color: #00cc00;
+  margin-right: 10px;
 }
-.float-linkedin{
-  top: 370px ;
-  background:#4296bf;
+.float-linkedin {
+  top: 370px;
+  background: #4296bf;
   transition: 400ms;
 }
 
-.float-linkedin:hover{
-   background-color:#4296bf;
-   margin-right: 10px;
+.float-linkedin:hover {
+  background-color: #4296bf;
+  margin-right: 10px;
 }
 /* Floating Social Media Bar Style Ends Here */
-#headerNavbarItems li .dropdown-menu
-{
+#headerNavbarItems li .dropdown-menu {
   padding: 0px;
 }
 
@@ -589,35 +582,31 @@ background-color: var(--bs-dropdown-link-active-bg);
   padding: 10px 35px;
 }
 
-#headerNavbarItems li .dropdown-menu
-{
+#headerNavbarItems li .dropdown-menu {
   background-color: #13aff0;
 }
-#headerNavbarItems li .dropdown-menu li{
+#headerNavbarItems li .dropdown-menu li {
   border-bottom: 3px solid #eeee22;
 }
 
-#headerNavbarItems li .dropdown-menu li:last-child{
+#headerNavbarItems li .dropdown-menu li:last-child {
   border-bottom: unset;
 }
-#headerNavbarItems li .dropdown-menu li a{
-  color:#fff;
+#headerNavbarItems li .dropdown-menu li a {
+  color: #fff;
   font-weight: 500;
 }
-#headerNavbarItems li a{
-  color:#fff;
+#headerNavbarItems li a {
+  color: #fff;
 }
 
 #headerNavbarItems li .dropdown-menu li .dropdown-item:hover,
 #headerNavbarItems li .dropdown-menu li .dropdown-item:focus,
 #headerNavbarItems li .dropdown-menu li .dropdown-item:active,
-#headerNavbarItems li .dropdown-menu li .dropdown-item:focus-within
-{
-  color:#333!important;
-  background-color:#eeee22!important;
-  
+#headerNavbarItems li .dropdown-menu li .dropdown-item:focus-within {
+  color: #333 !important;
+  background-color: #eeee22 !important;
 }
-
 
 /* Testimonials Style Starts Here */
 .testimonialsCards {
@@ -630,11 +619,11 @@ background-color: var(--bs-dropdown-link-active-bg);
   line-height: 1em;
 }
 .fw-normal {
-  font-weight: 400!important;
+  font-weight: 400 !important;
 }
 .comment_profile_container img {
   border-radius: 140px;
-  width: 75px!important;
+  width: 75px !important;
   height: 75px;
 }
 .quote_icon {
@@ -646,3 +635,139 @@ background-color: var(--bs-dropdown-link-active-bg);
   border: unset;
 }
 /* Testimonials Style Ends Here */
+
+.masonry {
+  column-count: 3;
+  column-gap: 1rem;
+}
+.masonry img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+@media (max-width: 768px) {
+  .masonry {
+      column-count: 2;
+  }
+}
+@media (max-width: 576px) {
+  .masonry {
+      column-count: 1;
+  }
+}
+
+.masonry img:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+  filter: brightness(50%);
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------- ribbon */
+/* HTML: <div class="ribbon">Your text content</div> */
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+}
+.ribbon {
+  --s: 1.8em; /* the ribbon size */
+  --d: .8em;  /* the depth */
+  --c: .8em;  /* the cutout part */
+  
+  padding: 0 calc(var(--s) + .5em) var(--d);
+  line-height: 1.8;
+  background:
+    conic-gradient(at left  var(--s) bottom var(--d),
+     #0000 25%,#0008 0 37.5%,#0004 0) 0   /50% 100% no-repeat,
+    conic-gradient(at right var(--s) bottom var(--d),
+     #0004 62.5%,#0008 0 75%,#0000 0) 100%/50% 100% no-repeat;
+  clip-path: polygon(0 var(--d), var(--s) var(--d),var(--s) 0,calc(100% - var(--s)) 0,calc(100% - var(--s)) var(--d),100% var(--d),calc(100% - var(--c)) calc(50% + var(--d)/2),100% 100%,calc(100% - var(--s) - var(--d)) 100%,calc(100% - var(--s) - var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) calc(100% - var(--d)),calc(var(--s) + var(--d)) 100%,0 100%,var(--c) calc(50% + var(--d)/2));
+  background-color: #CC333F; /* the main color */
+  width: fit-content;
+  margin: 2rem auto;
+}
+
+
+.pricing {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.pricing .plan {
+  background-color: #fff;
+  padding: 2.5rem;
+  margin: 12px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.pricing .plan h2 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+.pricing .plan .price {
+  margin-bottom: 1rem;
+  font-size: 30px;
+}
+.pricing .plan ul.features {
+  list-style-type: none;
+  text-align: left;
+}
+.pricing .plan ul.features li {
+  margin: 8px;
+}
+.pricing .plan ul.features li .fas {
+  margin-right: 4px;
+}
+.pricing .plan ul.features li .fa-check-circle {
+  color: #6ab04c;
+}
+.pricing .plan ul.features li .fa-times-circle {
+  color: #eb4d4b;
+}
+.pricing .plan button {
+  border: none;
+  width: 100%;
+  padding: 12px 35px;
+  margin-top: 1rem;
+  background-color: #6ab04c;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.pricing .plan.popular {
+  border: 2px solid #6ab04c;
+  position: relative;
+  transform: scale(1.08);
+}
+.pricing .plan.popular span {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #6ab04c;
+  color: #fff;
+  padding: 4px 20px;
+  font-size: 18px;
+  border-radius: 5px;
+}
+.pricing .plan:hover {
+  box-shadow: 5px 7px 67px -28px rgba(0, 0, 0, 0.37);
+}
+
+.social_media a{
+  font-size: 4rem;
+  color:#233243;
+   
+}
+.social_media a:hover{
+  color:red
+}
+
+.plan
+{
+  margin: 20px 0px;
+}

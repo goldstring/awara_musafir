@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar & Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Logo" style="width: 60px;">
+            </a>
+            <!-- Navbar Toggler triggers sidebar -->
+            <button class="navbar-toggler" type="button" id="navbarToggler">
+              <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                <ul class="navbar-nav" id="headerNavbarItems">
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar pt-0" id="sidebar">
+      <button class="btn btn-block d-flex w-100" id="closeSidebar" style="justify-content: space-between;border-radius: 0px;padding: 11px;background-color: #757575;color: #fff;">
+        <span>Close Menu</span><span class="mr-3"><i class="fa-solid fa-circle-xmark"></i></span>
+      </button>
+
+      
+      <ul class="navbar-nav" id="sidebarList">
+        
+      </ul>
+      <hr>
+      <div class="d-flex justify-content-center">
+        <img src="assets/images/logo.png" alt="Logo" style="width: 60px;">
+      </div>
+      
+    
+  
+
+        
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <h1 class='ribbon text-uppercase'>Packages</h1>
+
+    <div class="container mt-3 mb-3">
+        <h1 class="text-center">Choose the plan that fits for your team</h1>
+        <p class="pb-3 text-center">
+        Deploy your sites to global infrastructure in seconds. No credit card
+        required
+        </p>
+
+        <div class="pricing mt-4">
+            <div class="plan shadow">
+                <h2>Wedding Service</h2>
+                <div class="price">₹500</div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> Full-day Coverage</li>
+                    <li><i class="fas fa-check-circle"></i> 300+ Edited Photos</li>
+                    <li><i class="fas fa-check-circle"></i> Wedding Album</li>
+                    <li><i class="fas fa-check-circle"></i> 4K Video Package</li>
+                    <li><i class="fas fa-times-circle"></i> No Drone Photography</li>
+                </ul>
+                <button>Contact Us</button>
+            </div>
+            
+            <div class="plan popular">
+                <span>Most Popular</span>
+                <h2>Pre Wedding Service</h2>
+                <div class="price">₹400</div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> Outdoor & Studio Shoot</li>
+                    <li><i class="fas fa-check-circle"></i> 200+ Edited Photos</li>
+                    <li><i class="fas fa-check-circle"></i> Creative Poses</li>
+                    <li><i class="fas fa-check-circle"></i> Cinematic Video</li>
+                    <li><i class="fas fa-check-circle"></i> Drone Photography</li>
+                </ul>
+                <button>Contact Us</button>
+            </div>
+        
+            <div class="plan shadow">
+                <h2>Maternity Photography</h2>
+                <div class="price">₹300</div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> Indoor & Outdoor</li>
+                    <li><i class="fas fa-check-circle"></i> 100+ Edited Photos</li>
+                    <li><i class="fas fa-check-circle"></i> Professional Makeup</li>
+                    <li><i class="fas fa-check-circle"></i> Props & Dresses</li>
+                    <li><i class="fas fa-times-circle"></i> No Videography</li>
+                </ul>
+                <button>Contact Us</button>
+            </div>
+        
+            <div class="plan shadow">
+                <h2>New Born Photoshoot</h2>
+                <div class="price">₹250</div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> Studio & Home Shoot</li>
+                    <li><i class="fas fa-check-circle"></i> 50+ Edited Photos</li>
+                    <li><i class="fas fa-check-circle"></i> Baby Props Included</li>
+                    <li><i class="fas fa-check-circle"></i> Family Portraits</li>
+                    <li><i class="fas fa-times-circle"></i> No Video Coverage</li>
+                </ul>
+                <button>Contact Us</button>
+            </div>
+        
+            <div class="plan shadow">
+                <h2>Interior Photography</h2>
+                <div class="price">₹600</div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> High-Resolution Images</li>
+                    <li><i class="fas fa-check-circle"></i> Drone Photography</li>
+                    <li><i class="fas fa-check-circle"></i> 3D Virtual Tour</li>
+                    <li><i class="fas fa-check-circle"></i> HDR & Retouching</li>
+                    <li><i class="fas fa-check-circle"></i> Wide-Angle Shots</li>
+                </ul>
+                <button>Contact Us</button>
+            </div>
+        
+            <div class="plan shadow">
+                <h2>Custom Photography</h2>
+                <div class="price">Custom Pricing</div>
+                <ul class="features">
+                    <li><i class="fas fa-check-circle"></i> Personalized Packages</li>
+                    <li><i class="fas fa-check-circle"></i> Studio & Outdoor Options</li>
+                    <li><i class="fas fa-check-circle"></i> High-End Retouching</li>
+                    <li><i class="fas fa-check-circle"></i> Flexible Timings</li>
+                    <li><i class="fas fa-check-circle"></i> Consultation Included</li>
+                </ul>
+                <button>Contact Us</button>
+            </div>
+        </div>
+        
+        
+    </div>
+
+    <section class="container-fluid theme-bg">
+      <div class="container py-5">
+          <div class="theme_box bg-white shadow-lg">
+              <div class="row h-100">
+                  <div class="col-md-4">
+                      <div class="h-100 d-flex flex-column justify-content-center" style="align-items: flex-start">
+                      <h2 style="font-size:2.2em;" class="font-weight-bold text-dark text-left testimonal_title">Let’s connect and bring your vision to life!</h2>
+                      <p>
+                        I’m a professional photographer specializing in capturing stunning moments with creativity and precision. Whether it’s portraits, events, or commercial shoots, I combine artistry with the latest techniques to create compelling visuals that tell your story."
+                      </p>
+  
+                  
+                      <button class="btn btn-danger btn-block" fdprocessedid="3mw7kf">Feel Free to connect! </button>
+                      </div>
+                  </div>
+                  
+                  <div class="col-md-8">
+                      <img class="w-100" src="assets/images/meet_up.jpg" alt="Social Media Advertising: Increase your business growth with targeted Audience">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+    <footer id="footer" class="footer">
+
+      
+  
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="d-flex align-items-center">
+              <span class="sitename bg-white" style="border-radius: 10px;">
+                <img src="assets/images/logo1.png" class="rounded-circle" alt="Logo" style="width: 60px;">
+              </span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-4 col-md-12">
+            <h4>Follow Us</h4>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <div class="social-links d-flex">
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-whatsapp"></i></a>
+              <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="container copyright text-center mt-4">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">eNno</strong> <span>All Rights Reserved</span></p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon
+        </a></div><a href="https://themewagon.com">
+      </a></div><a href="https://themewagon.com">
+  
+    </a></footer>
+
+  
+
+    <div class="float-sm">
+      <div class="side-mob">
+          
+          
+                                                           <a href="https://www.youtube.com/channel/UCA3sSo5pDwwruyq007-u0bg" target="_blank" title="youtube">
+                                    <div class="fl-fl float-youtube">
+                                       <i class="fa fa-brands fa-youtube" style="margin-left: 12px; font-size: 19px;color:#fff;"></i>
+                                    </div>
+                                   </a>
+                                                           <a href="https://www.facebook.com/amigoairacademy/" target="_blank" title="fb">
+                                    <div class="fl-fl float-fb">
+                                       <i class="fa fa-brands fa-facebook" style="margin-left: 12px; font-size: 19px"></i>
+                                    </div>
+                                   </a>
+                                                           <a href="https://www.instagram.com/amigoacademy/" target="_blank" title="ig">
+                                    <div class="fl-fl float-ig">
+                                       <i class="fa fa-brands fa-instagram" style="margin-left: 12px; font-size: 19px"></i>
+                                    </div>
+                                   </a>
+                                                           <a href="https://mobile.twitter.com/amigo_academy?lang=en" target="_blank" title="twitter">
+                                    <div class="fl-fl float-twitter">
+                                       <i class="fa fa-solid fa-envelope" style="margin-left: 12px; font-size: 19px"></i>
+                                    </div>
+                                   </a>
+                                                           <a href="https://api.whatsapp.com/send?phone=919987588932" target="_blank" title="whatsapp">
+                                    <div class="fl-fl float-whatsapp">
+                                       <i class="fa fa-brands fa-whatsapp" style="margin-left: 12px; font-size: 19px"></i>
+                                    </div>
+                                   </a>
+                                                   
+          
+         <!--<a href="https://youtube.com/channel/UCA3sSo5pDwwruyq007-u0bg" target="_blank" title="Youtube">-->
+         <!--   <div class="fl-fl float-youtube">-->
+         <!--      <i class="fa fa-youtube" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+         <!--<a href="https://www.facebook.com/amigoairacademy/" target="_new" title="Facebook">-->
+         <!--   <div class="fl-fl float-fb">-->
+         <!--      <i class="fa fa-facebook" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+         <!--<a href="https://www.instagram.com/amigoacademy/" target="_blank" title="Instagram">-->
+         <!--   <div class="fl-fl float-ig">-->
+         <!--      <i class="fa fa-instagram" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+         <!--<a href="https://mobile.twitter.com/amigo_academy?lang=en" target="_blank" title="twitter">-->
+         <!--   <div class="fl-fl float-twitter">-->
+         <!--      <i class="fa fa-twitter" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+         <!--<a href="https://api.whatsapp.com/send?phone=919987588932" target="_blank" title="whatsapp">-->
+         <!--   <div class="fl-fl float-whatsapp">-->
+         <!--      <i class="fa fa-whatsapp" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+      </div>
+   </div>
+
+    <!-- JavaScript to control sidebar -->
+     <script src="assets/js/main.js"></script>
+     <script src="assets/js/content.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".owl-carousel-2").owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                margin: 20,
+                items:1
+                
+            });
+        });
+    </script>
+    <script>
+        document.getElementById("navbarToggler").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("show");
+            document.getElementById("overlay").classList.toggle("show");
+        });
+
+        document.getElementById("overlay").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.remove("show");
+            document.getElementById("overlay").classList.remove("show");
+        });
+        document.getElementById("closeSidebar").addEventListener("click", function() {
+          document.getElementById("sidebar").classList.remove("show");
+          document.getElementById("overlay").classList.remove("show");
+        });
+
+        document.querySelectorAll('.nav-link[data-bs-toggle="collapse"]').forEach(link => {
+        link.addEventListener("click", function () {
+            let icon = this.querySelector(".toggle-icon");
+            let isExpanded = this.getAttribute("aria-expanded") === "true";
+            icon.textContent = isExpanded ? "-" : "+";
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>

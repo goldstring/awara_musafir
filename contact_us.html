@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar & Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Logo" style="width: 60px;">
+            </a>
+            <!-- Navbar Toggler triggers sidebar -->
+            <button class="navbar-toggler" type="button" id="navbarToggler">
+              <i class="fa-solid fa-bars text-white"></i>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+                <ul class="navbar-nav" id="headerNavbarItems">
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar pt-0" id="sidebar">
+      <button class="btn btn-block d-flex w-100" id="closeSidebar" style="justify-content: space-between;border-radius: 0px;padding: 11px;background-color: #757575;color: #fff;">
+        <span>Close Menu</span><span class="mr-3"><i class="fa-solid fa-circle-xmark"></i></span>
+      </button>
+
+      
+      <ul class="navbar-nav" id="sidebarList">
+        
+      </ul>
+      <hr>
+      <div class="d-flex justify-content-center">
+        <img src="assets/images/logo.png" alt="Logo" style="width: 60px;">
+      </div>
+      
+    
+  
+
+        
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <h1 class='ribbon text-uppercase'>Contact Us</h1>
+
+
+    <div class="container">
+        <div class="d-flex h-100 flex-column justify-content-center align-items-center">
+            <h1 class="mb-4 text-uppercase border-bottom border-danger border-5">Contact Information</h1>
+            <div>
+                <div class="mb-2">
+                    <p class="contact_info"><strong>Address:</strong> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's s</p>
+                </div>
+                <div class="d-flex justify-content-between mt-3">
+                    <p class="contact_info"><strong>Phone Number:</strong>+91-8956 546 565</p>                    
+                    <p class="contact_info"><strong>Landline Number:</strong>+022-91 000 000</p>                    
+                    <p class="contact_info"><strong>Email:</strong> info@test.com</p>
+                </div>
+                                    
+            </div>
+            
+        </div>
+    </div>
+
+    <section class="container mt-3 mb-3 p-4">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>Follow us on social media</h2>
+          </div>
+        </div>
+        <div class="row pt-4 social_media">
+          <div class="col-md-3 text-center">
+            <a href="#" target="_blank">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+          </div>
+          <div class="col-md-3 text-center">
+            <a href="#" target="_blank">
+              <i class="fab fa-twitter fa-2x"></i>
+            </a>
+          </div>
+          <div class="col-md-3 text-center">
+            <a href="#" target="_blank">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+          </div>
+          <div class="col-md-3 text-center">
+            <a href="#" target="_blank">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+          </div>
+        </div>
+    </section>
+
+    <section class="container mt-3 p-4">
+        <div class="row">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509336!2d144.96305791550454!3d-37.81362797975171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0x5045675218cee17!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sin!4v1632844629034!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </section>
+
+
+    <section class="container-fluid theme-bg">
+      <div class="container py-5">
+          <div class="theme_box bg-white shadow-lg">
+              <div class="row h-100">
+                  <div class="col-md-4">
+                      <div class="h-100 d-flex flex-column justify-content-center" style="align-items: flex-start">
+                      <h2 style="font-size:2.2em;" class="font-weight-bold text-dark text-left testimonal_title">Let’s connect and bring your vision to life!</h2>
+                      <p>
+                        I’m a professional photographer specializing in capturing stunning moments with creativity and precision. Whether it’s portraits, events, or commercial shoots, I combine artistry with the latest techniques to create compelling visuals that tell your story."
+                      </p>
+  
+                  
+                      <button class="btn btn-danger btn-block" fdprocessedid="3mw7kf">Feel Free to connect! </button>
+                      </div>
+                  </div>
+                  
+                  <div class="col-md-8">
+                      <img class="w-100" src="assets/images/meet_up.jpg" alt="Social Media Advertising: Increase your business growth with targeted Audience">
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section>
+
+
+    <footer id="footer" class="footer">
+
+      
+  
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="d-flex align-items-center">
+              <span class="sitename bg-white" style="border-radius: 10px;">
+                <img src="assets/images/logo1.png" class="rounded-circle" alt="Logo" style="width: 60px;">
+              </span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            </ul>
+          </div>
+  
+          <div class="col-lg-4 col-md-12">
+            <h4>Follow Us</h4>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <div class="social-links d-flex">
+              <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-instagram"></i></a>
+              <a href=""><i class="fab fa-whatsapp"></i></a>
+              <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+  
+      <div class="container copyright text-center mt-4">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">eNno</strong> <span>All Rights Reserved</span></p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon
+        </a></div><a href="https://themewagon.com">
+      </a></div><a href="https://themewagon.com">
+  
+    </a></footer>
+
+  
+
+    <div class="float-sm">
+      <div class="side-mob">
+          
+          
+                                                           <a href="https://www.youtube.com/channel/UCA3sSo5pDwwruyq007-u0bg" target="_blank" title="youtube">
+                                    <div class="fl-fl float-youtube">
+                                       <i class="fa fa-brands fa-youtube" style="margin-left: 12px; font-size: 19px;color:#fff;"></i>
+                                    </div>
+                                   </a>
+                                                           <a href="https://www.facebook.com/amigoairacademy/" target="_blank" title="fb">
+                                    <div class="fl-fl float-fb">
+                                       <i class="fa fa-brands fa-facebook" style="margin-left: 12px; font-size: 19px"></i>
+                                    </div>
+                                   </a>
+                                                           <a href="https://www.instagram.com/amigoacademy/" target="_blank" title="ig">
+                                    <div class="fl-fl float-ig">
+                                       <i class="fa fa-brands fa-instagram" style="margin-left: 12px; font-size: 19px"></i>
+                                    </div>
+                                   </a>
+                                                           <a href="https://mobile.twitter.com/amigo_academy?lang=en" target="_blank" title="twitter">
+                                    <div class="fl-fl float-twitter">
+                                       <i class="fa fa-solid fa-envelope" style="margin-left: 12px; font-size: 19px"></i>
+                                    </div>
+                                   </a>
+                                                           <a href="https://api.whatsapp.com/send?phone=919987588932" target="_blank" title="whatsapp">
+                                    <div class="fl-fl float-whatsapp">
+                                       <i class="fa fa-brands fa-whatsapp" style="margin-left: 12px; font-size: 19px"></i>
+                                    </div>
+                                   </a>
+                                                   
+          
+         <!--<a href="https://youtube.com/channel/UCA3sSo5pDwwruyq007-u0bg" target="_blank" title="Youtube">-->
+         <!--   <div class="fl-fl float-youtube">-->
+         <!--      <i class="fa fa-youtube" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+         <!--<a href="https://www.facebook.com/amigoairacademy/" target="_new" title="Facebook">-->
+         <!--   <div class="fl-fl float-fb">-->
+         <!--      <i class="fa fa-facebook" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+         <!--<a href="https://www.instagram.com/amigoacademy/" target="_blank" title="Instagram">-->
+         <!--   <div class="fl-fl float-ig">-->
+         <!--      <i class="fa fa-instagram" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+         <!--<a href="https://mobile.twitter.com/amigo_academy?lang=en" target="_blank" title="twitter">-->
+         <!--   <div class="fl-fl float-twitter">-->
+         <!--      <i class="fa fa-twitter" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+         <!--<a href="https://api.whatsapp.com/send?phone=919987588932" target="_blank" title="whatsapp">-->
+         <!--   <div class="fl-fl float-whatsapp">-->
+         <!--      <i class="fa fa-whatsapp" style="margin-left: 12px;"></i>-->
+         <!--   </div>-->
+         <!--</a>-->
+      </div>
+   </div>
+
+    <!-- JavaScript to control sidebar -->
+     <script src="assets/js/main.js"></script>
+     <script src="assets/js/content.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            $(".owl-carousel-2").owlCarousel({
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                margin: 20,
+                items:1
+                
+            });
+        });
+    </script>
+    <script>
+        document.getElementById("navbarToggler").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("show");
+            document.getElementById("overlay").classList.toggle("show");
+        });
+
+        document.getElementById("overlay").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.remove("show");
+            document.getElementById("overlay").classList.remove("show");
+        });
+        document.getElementById("closeSidebar").addEventListener("click", function() {
+          document.getElementById("sidebar").classList.remove("show");
+          document.getElementById("overlay").classList.remove("show");
+        });
+
+        document.querySelectorAll('.nav-link[data-bs-toggle="collapse"]').forEach(link => {
+        link.addEventListener("click", function () {
+            let icon = this.querySelector(".toggle-icon");
+            let isExpanded = this.getAttribute("aria-expanded") === "true";
+            icon.textContent = isExpanded ? "-" : "+";
+        });
+    });
+
+
+    </script>
+
+</body>
+</html>

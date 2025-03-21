@@ -5,51 +5,51 @@ const navbarData = [
         "link": "index.html",
         "is_nested": false
     },
-    {
-        "id": "services",
-        "label": "Services",
-        "title": "Services",
-        "link": "javascript:void(0)",
-        "id": "Services",
-        "is_nested": true,
-        "root_node": false,
-        "subMenu": [
-            {
-                "label": "Wedding Service",
-                "icon": '<i class="fa-solid fa-code"></i>',
-                "title": "Wedding Service",
-                "link": "wedding_service.html"
-            },
-            {
-                "label": "Pre Wedding Service",
-                "icon": '<i class="fa-solid fa-code"></i>',
-                "title": "Pre Wedding Service",
-                "link": "pre_wedding_service.html"
-            },
-            {
-                "label": "Maternity Photography",
-                "icon": '<i class="fa-solid fa-code"></i>',
-                "title": "Maternity Photography",
-                "link": "maternity_photography.html"
-            }, {
-                "label": "New Born Photoshoot",
-                "icon": '<i class="fa-solid fa-code"></i>',
-                "title": "New Born Photoshoot",
-                "link": "new_born_photoshoot.html"
-            }
-            , {
-                "label": "Interior Photography",
-                "icon": '<i class="fa-solid fa-code"></i>',
-                "title": "Interior Photography",
-                "link": "interior_photography.html"
-            }, {
-                "label": "Custom Photography",
-                "icon": '<i class="fa-solid fa-code"></i>',
-                "title": "Custom Photography",
-                "link": "custom_photography.html"
-            }
-        ]
-    },
+    // {
+    //     "id": "services",
+    //     "label": "Services",
+    //     "title": "Services",
+    //     "link": "javascript:void(0)",
+    //     "id": "Services",
+    //     "is_nested": true,
+    //     "root_node": false,
+    //     "subMenu": [
+    //         {
+    //             "label": "Wedding Service",
+    //             "icon": '<i class="fa-solid fa-code"></i>',
+    //             "title": "Wedding Service",
+    //             "link": "wedding_service.html"
+    //         },
+    //         {
+    //             "label": "Pre Wedding Service",
+    //             "icon": '<i class="fa-solid fa-code"></i>',
+    //             "title": "Pre Wedding Service",
+    //             "link": "pre_wedding_service.html"
+    //         },
+    //         {
+    //             "label": "Maternity Photography",
+    //             "icon": '<i class="fa-solid fa-code"></i>',
+    //             "title": "Maternity Photography",
+    //             "link": "maternity_photography.html"
+    //         }, {
+    //             "label": "New Born Photoshoot",
+    //             "icon": '<i class="fa-solid fa-code"></i>',
+    //             "title": "New Born Photoshoot",
+    //             "link": "new_born_photoshoot.html"
+    //         }
+    //         , {
+    //             "label": "Interior Photography",
+    //             "icon": '<i class="fa-solid fa-code"></i>',
+    //             "title": "Interior Photography",
+    //             "link": "interior_photography.html"
+    //         }, {
+    //             "label": "Custom Photography",
+    //             "icon": '<i class="fa-solid fa-code"></i>',
+    //             "title": "Custom Photography",
+    //             "link": "custom_photography.html"
+    //         }
+    //     ]
+    // },
     {
         "id": "gallery",
         "label": "Gallery",
